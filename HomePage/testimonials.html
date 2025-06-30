@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Testimonials Slider</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+  <style>
+    body {
+      background: #fff;
+      font-family: 'Segoe UI', sans-serif;
+      
+    }
+
+    .testimonial-section {
+      text-align: center;
+    }
+
+    .testimonial-title {
+      font-weight: 700;
+      font-size: 2.5rem;
+      color: #0f2c53;
+      margin-bottom: 30px;
+      position: relative;
+    }
+
+    .testimonial-title::after {
+      content: '';
+      display: block;
+      width: 80px;
+      height: 3px;
+      background-color: #0f2c53;
+      margin: 10px auto 0;
+    }
+
+    .testimonial-wrapper {
+      display: flex;
+      overflow-x: hidden;
+      gap: 20px;
+      padding: 20px;
+      scroll-behavior: smooth;
+      height: 330px;
+    }
+
+    .testimonial-card {
+      background-color: #fff;
+      border-radius: 10px;
+      padding: 25px;
+      flex: 0 0 calc(25% - 20px);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+      text-align: center;
+      position: relative;
+    }
+
+    .testimonial-img {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      margin: 0 auto -30px;
+      object-fit: cover;
+      border: 4px solid #fff;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    .testimonial-name {
+      font-weight: 600;
+      margin-top: 40px;
+    }
+
+    .testimonial-date {
+      font-size: 0.875rem;
+      color: gray;
+    }
+
+    .testimonial-rating {
+      color: #e65300;
+      font-size: 1.1rem;
+      margin: 10px 0;
+    }
+
+    .testimonial-comment {
+      font-size: 0.95rem;
+      color: #333;
+    }
+
+    .arrow-btn {
+      border: none;
+      background: #e65300;
+      color: #fff;
+      font-size: 1.5rem;
+      padding: 10px 15px;
+      border-radius: 8px;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      z-index: 1;
+      cursor: pointer;
+    }
+
+    .arrow-left { left: -20px; }
+    .arrow-right { right: -20px; }
+
+    .slider-container {
+      position: relative;
+      max-width: 1200px;
+      margin: 0 auto;
+      overflow: hidden;
+    }
+
+    @media (max-width: 992px) {
+      .testimonial-card {
+        flex: 0 0 calc(33.333% - 20px);
+      }
+    }
+
+    @media (max-width: 768px) {
+      .testimonial-card {
+        flex: 0 0 calc(50% - 20px);
+      }
+    }
+
+    @media (max-width: 576px) {
+      .testimonial-card {
+        flex: 0 0 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <section class="testimonial-section">
+    <h2 class="testimonial-title">Testimonials</h2>
+
+    <div class="slider-container">
+      <button class="arrow-btn arrow-left" onclick="scrollSlider(-1)"><i class="bi bi-chevron-left"></i></button>
+      <div class="testimonial-wrapper" id="testimonialSlider">
+        <!-- Card 1 -->
+        <div class="testimonial-card">
+          <img src="../Assets/profile.png" class="testimonial-img">
+          <div class="testimonial-name">Shraddha</div>
+          <div class="testimonial-date">2024-08-03</div>
+          <div class="testimonial-rating">★★★★★ <i class="bi bi-patch-check-fill text-primary"></i></div>
+          <div class="testimonial-comment">Very good school, the teacher speak very politely, the principal is very good 😊👍</div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="testimonial-card">
+          <img src="../Assets/profile.png" class="testimonial-img">
+          <div class="testimonial-name">Ankita</div>
+          <div class="testimonial-date">2024-05-21</div>
+          <div class="testimonial-rating">★★★★★ <i class="bi bi-patch-check-fill text-primary"></i></div>
+          <div class="testimonial-comment">World class facility at Indore. One of the best school of Indore.</div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="testimonial-card">
+          <img src="../Assets/profile.png" class="testimonial-img">
+          <div class="testimonial-name">Ayushi Goswami</div>
+          <div class="testimonial-date">2024-05-13</div>
+          <div class="testimonial-rating">★★★★★ <i class="bi bi-patch-check-fill text-primary"></i></div>
+          <div class="testimonial-comment">Best school in Indore</div>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="testimonial-card">
+          <img src="../Assets/profile.png" class="testimonial-img">
+          <div class="testimonial-name">Sneha TAMRAKAR</div>
+          <div class="testimonial-date">2024-05-10</div>
+          <div class="testimonial-rating">★★★★★ <i class="bi bi-patch-check-fill text-primary"></i></div>
+          <div class="testimonial-comment">School is best for education and all activities.</div>
+        </div>
+        <div class="testimonial-card">
+            <img src="../Assets/profile.png" class="testimonial-img">
+            <div class="testimonial-name">Sneha TAMRAKAR</div>
+            <div class="testimonial-date">2024-05-10</div>
+            <div class="testimonial-rating">★★★★★ <i class="bi bi-patch-check-fill text-primary"></i></div>
+            <div class="testimonial-comment">School is best for education and all activities.</div>
+          </div>
+          <div class="testimonial-card">
+            <img src="../Assets/profile.png" class="testimonial-img">
+            <div class="testimonial-name">Sneha TAMRAKAR</div>
+            <div class="testimonial-date">2024-05-10</div>
+            <div class="testimonial-rating">★★★★★ <i class="bi bi-patch-check-fill text-primary"></i></div>
+            <div class="testimonial-comment">School is best for education and all activities.</div>
+          </div>
+      </div>
+      <button class="arrow-btn arrow-right" onclick="scrollSlider(1)"><i class="bi bi-chevron-right"></i></button>
+    </div>
+  </section>
+
+  <script>
+    function scrollSlider(direction) {
+      const slider = document.getElementById('testimonialSlider');
+      const card = slider.querySelector('.testimonial-card');
+      const scrollAmount = card.offsetWidth + 20;
+      slider.scrollBy({ left: direction * scrollAmount, behavior: 'smooth' });
+    }
+  </script>
+
+</body>
+</html>

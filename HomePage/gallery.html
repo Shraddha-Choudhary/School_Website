@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Image Cards with Animation</title>
+
+    <style>
+      .flex-1 {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 50px;
+        padding: 40px;
+      }
+
+      .simple-shape {
+        width: 270px;
+        height: 270px;
+        background-color: #fff;
+        border-radius: 12px;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        animation: simple-scale 1.5s ease-in-out infinite alternate;
+        transition: transform 0.4s ease-in-out;
+      }
+
+      .simple-shape:hover {
+        animation: simple-rotate 2s linear infinite;
+      }
+
+      .simple-shape img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      @keyframes simple-scale {
+        0% {
+          transform: scale(1);
+        }
+        100% {
+          transform: scale(1.2);
+        }
+      }
+
+      h2 {
+        text-align: center;
+        margin: 30px 0;
+        font-weight: bold;
+      }
+
+      .btn-container {
+        display: flex;
+        justify-content: center;
+        margin-top: 30px;
+      }
+
+      .see-more-btn {
+    background-color: #0f2c53;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 20px;         /* ✅ Large on desktop */
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    min-width: 400px;
+    min-height: 60px;
+  }
+
+  .see-more-btn:hover {
+    background-color: #e65300;
+  }
+
+  @media only screen and (max-width: 576px) {
+    .see-more-btn {
+      font-size: 14px !important;  /* ✅ Smaller on mobile */
+      font-weight: 500;
+      padding: 6px 14px;
+      min-width: 250px;           /* optional: narrower for small screen */
+      min-height: 45px;
+    }
+  }
+
+    </style>
+  </head>
+  <body>
+    <h2 class="section-title mt-5">Our Photo Gallery</h2>
+    <div class="flex-1">
+      <div class="simple-shape">
+        <img src="../Assets/gallery1.png" alt="Photo 1" />
+      </div>
+
+      <div class="simple-shape">
+        <img src="../Assets/gallery2.png" alt="Photo 2" />
+      </div>
+
+      <div class="simple-shape">
+        <img src="../Assets/gallery3.png" alt="Photo 3" />
+      </div>
+
+      <div class="simple-shape">
+        <img src="../Assets/gallery4.png" alt="Photo 4" />
+      </div>
+    </div>
+
+    <div class="flex-1">
+      <div class="simple-shape">
+        <img src="../Assets/gallery5.png" alt="Photo 1" />
+      </div>
+
+      <div class="simple-shape">
+        <img src="../Assets/gallery6.png" alt="Photo 2" />
+      </div>
+
+      <div class="simple-shape">
+        <img src="../Assets/gallery7.png" alt="Photo 3" />
+      </div>
+
+      <div class="simple-shape">
+        <img src="../Assets/gallery8.png" alt="Photo 4" />
+      </div>
+    </div>
+    <!-- <div class="btn-container mb-5 mt-5">
+      <button class="see-more-btn">See More</button>
+    </div> -->
+
+
+    <div class="btn-container mb-5 mt-5">
+      <button class="see-more-btn" style="font-size: 18px; font-weight: 600;">
+        See More
+      </button>
+    </div>
+    
+    
+  </body>
+</html>

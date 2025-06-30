@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>School FAQ Section</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        background-color: #fff;
+        font-family: "Segoe UI", sans-serif;
+      }
+
+      .faq-section {
+        max-width: 950px;
+        margin: 0 auto;
+        padding: 40px 30px;
+        background-color: #f9f9f9;
+        border-radius: 12px;
+        box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+      }
+
+      .faq-title {
+        text-align: center;
+        font-size: 2.75rem;
+        font-weight: bold;
+        margin-bottom: 50px;
+        color: #0f2c53;
+      }
+
+      .faq-title::after {
+        content: "";
+        display: block;
+        width: 70px;
+        height: 3px;
+        background-color: #0f2c53;
+        margin: 10px auto 0;
+      }
+
+      .accordion-button {
+        background-color: #0f2c53;
+        color: white;
+        font-weight: 600;
+        font-size: 1.1rem;
+        border: none;
+        padding: 18px 25px;
+        border-radius: 8px;
+      }
+
+      .accordion-button:not(.collapsed) {
+        background-color: #0f2c53;
+        color: #e65300;
+      }
+
+      .accordion-button:focus {
+        box-shadow: none;
+      }
+
+      /* .accordion-body {
+        font-size: 1rem;
+        padding: 25px 25px 15px 25px;
+        background: #fff;
+        color: #333;
+        border-radius: 0 0 8px 8px;
+      } */
+
+      .accordion-body {
+  font-size: 1rem;
+  padding: 25px 25px 15px 25px;
+  background-color: #d5e3f4; /* ✅ Light blue background */
+  color: #333;
+  border-radius: 0 0 8px 8px;
+}
+
+
+      .accordion-item {
+        border: none;
+        margin-bottom: 18px;
+        overflow: hidden;
+        border-radius: 10px;
+      }
+      /* Animate accordion body */
+.accordion-body {
+  animation: fadeInDown 0.4s ease-in-out;
+}
+
+/* Smooth in animation */
+@keyframes fadeInDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Add arrow icon rotation */
+.accordion-button::after {
+  transition: transform 0.3s ease;
+}
+.accordion-button:not(.collapsed)::after {
+  transform: rotate(180deg);
+}
+.accordion-button:hover {
+  box-shadow: 0 0 12px rgba(230, 83, 0, 0.4);
+}
+
+
+.accordion-button:not(.collapsed) {
+  background-color: #d5e3f4;
+  color: #0f2c53; /* or #e65300 if you want to keep that */
+}
+
+
+    </style>
+  </head>
+  <body>
+    <section class="faq-section">
+      <h2 class="faq-title">Frequently Asked Questions</h2>
+
+      <div class="accordion" id="faqAccordion">
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingOne">
+            <button
+              class="accordion-button"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapseOne"
+              aria-expanded="true"
+              aria-controls="collapseOne"
+            >
+              What curriculum does Edify School Chhatarpur offer?
+            </button>
+          </h2>
+          <div
+            id="collapseOne"
+            class="accordion-collapse collapse show"
+            aria-labelledby="headingOne"
+            data-bs-parent="#faqAccordion"
+          >
+            <div class="accordion-body">
+              Edify School Chhatarpur offers our unique 3C Curriculum till Grade
+              V and from Grade VI onwards we offer CBSE curriculum.
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingTwo">
+            <button
+              class="accordion-button collapsed"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapseTwo"
+              aria-expanded="false"
+              aria-controls="collapseTwo"
+            >
+              What classes do you admit students into?
+            </button>
+          </h2>
+          <div
+            id="collapseTwo"
+            class="accordion-collapse collapse"
+            aria-labelledby="headingTwo"
+            data-bs-parent="#faqAccordion"
+          >
+            <div class="accordion-body">
+              We admit students from Nursery to Grade X as per seat
+              availability.
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingThree">
+            <button
+              class="accordion-button collapsed"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapseThree"
+              aria-expanded="false"
+              aria-controls="collapseThree"
+            >
+              When can I visit the school?
+            </button>
+          </h2>
+          <div
+            id="collapseThree"
+            class="accordion-collapse collapse"
+            aria-labelledby="headingThree"
+            data-bs-parent="#faqAccordion"
+          >
+            <div class="accordion-body">
+              You can visit the school during working hours from Monday to
+              Saturday between 9:00 AM to 3:00 PM.
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingFour">
+            <button
+              class="accordion-button collapsed"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapseFour"
+              aria-expanded="false"
+              aria-controls="collapseFour"
+            >
+              What is the average class size at Edify School Chhatarpur?
+            </button>
+          </h2>
+          <div
+            id="collapseFour"
+            class="accordion-collapse collapse"
+            aria-labelledby="headingFour"
+            data-bs-parent="#faqAccordion"
+          >
+            <div class="accordion-body">
+              The average class size is 25 to 30 students per classroom for
+              better student-teacher interaction.
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingFive">
+            <button
+              class="accordion-button collapsed"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapseFive"
+              aria-expanded="false"
+              aria-controls="collapseFive"
+            >
+              Is transport facility available?
+            </button>
+          </h2>
+          <div
+            id="collapseFive"
+            class="accordion-collapse collapse"
+            aria-labelledby="headingFive"
+            data-bs-parent="#faqAccordion"
+          >
+            <div class="accordion-body">
+              Yes, we provide safe and reliable transport facilities across
+              Chhatarpur and nearby areas.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

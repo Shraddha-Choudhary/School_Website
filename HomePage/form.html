@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>School Indore</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Icons (for the up arrow) -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+
+  <style>
+    body {
+      background-color: #fff;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    .highlight-orange {
+      color: #e65300;
+    }
+
+    .left-content {
+      padding: 50px 30px;
+    }
+
+    .form-section {
+      background-color: #0f2c53;
+      color: white;
+      border-radius: 20px;
+      padding: 40px;
+    }
+
+    .form-section h2 {
+      font-weight: bold;
+      text-align: center;
+      margin-bottom: 30px;
+      position: relative;
+    }
+
+    .form-section h2::after {
+      content: "";
+      width: 80px;
+      height: 2px;
+      background-color: white;
+      display: block;
+      margin: 10px auto 0;
+    }
+
+    .form-control, .form-select {
+      border-radius: 8px;
+      margin-bottom: 15px;
+    }
+
+    .form-control::placeholder {
+      color: #ccc;
+    }
+
+    .btn-orange {
+      background-color: #e65300;
+      border: none;
+      border-radius: 8px;
+      color: white;
+      padding: 10px;
+      width: 100%;
+    }
+
+    .btn-orange:hover {
+      background-color: #e65300;
+    }
+
+    .up-arrow-btn {
+      position: fixed;
+      bottom: 20px;
+      left: 20px;
+      border-radius: 8px;
+      background-color: #e65300;
+      color: white;
+      padding: 10px 14px;
+      border: none;
+    }
+
+    @media (min-width: 992px) {
+  .left-content {
+    padding-top: 80px !important; /* Desktop: thoda aur niche */
+  }
+}
+
+@media (max-width: 576px) {
+  .left-content {
+    padding-top: 30px !important; /* Mobile: thoda aur upar */
+  }
+}
+  </style>
+</head>
+<body>
+
+  <div class="container mt-5">
+    <div class="row align-items-center">
+      
+      <!-- Left Content -->
+      <div class="col-lg-6 left-content">
+        <h2 class="fw-bold">Welcome To <span class="highlight-orange">School Indore</span></h2>
+        <h5 class="fw-semibold mt-3">CBSE Affiliation Number: 1031140</h5>
+        <p class="mt-4">
+          The demand of today’s fast moving competitive world is innovation. We believe that children, if motivated and guided can do wonders. Therefore, we should not strangulate their creative bent of thought, rather provide a platform to inspire the budding minds to re-invent and re-create.
+        </p>
+        <p>
+          With this in mind, <strong> School</strong> aims to provide excellence in education through innovation, self-realization and self-exploration in all possible areas.
+        </p>
+        <p>
+          We also believe that if given an opportunity, every individual has the capacity to excel in one field or another, be it academics, games & sports arena or any cultural zone. It is our responsibility, as educators to ignite the ‘fire’ in each child to blossom in his/her area of interest through a plethora of activities.
+        </p>
+        <!-- <button style="background-color: #0f2c53; color: white;" class="btn mt-4">Read More</button> -->
+        <button
+  class="btn mt-4"
+  style="background-color: #0f2c53; color: white; transition: 0.3s;"
+  onmouseover="this.style.backgroundColor='#e65300'"
+  onmouseout="this.style.backgroundColor='#0f2c53'"
+>
+  Read More
+</button>
+
+     
+     
+      </div>
+
+      <!-- Right Side Form -->
+      <div class="col-lg-6 ">
+        <div class="form-section">
+          <h2>Admission Enquiry</h2>
+          <form>
+            <input type="text" class="form-control" placeholder="Child Name" required>
+            <select class="form-select" required>
+              <option selected disabled>Select The Grade Of Your Child</option>
+              <option>Nursery</option>
+              <option>KG I</option>
+              <option>KG II</option>
+              <option>Class 1</option>
+              <option>Class 2</option>
+            </select>
+            <select class="form-select" required>
+              <option selected disabled>Academic Year</option>
+              <option>2024-2025</option>
+              <option>2025-2026</option>
+            </select>
+            <input type="text" class="form-control" placeholder="Parent Name" required>
+            <input type="tel" class="form-control" placeholder="Mobile Number" required>
+            <input type="email" class="form-control" placeholder="Email" required>
+            <textarea class="form-control" placeholder="Message" rows="4"></textarea>
+            <button type="submit" class="btn" style="
+            background-color: #e65300;
+            color: white;
+            width: 100%;
+            padding: 10px 0;
+            font-size: 18px;
+            font-weight: 500;
+            border-radius: 6px;
+            border: none;
+          ">
+            Submit
+          </button>
+          
+          </form>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Scroll to top button -->
+  <button onclick="window.scrollTo({ top: 0, behavior: 'smooth' });" class="up-arrow-btn">
+    <i class="bi bi-arrow-up-short fs-4"></i>
+  </button>
+
+  <!-- Bootstrap Bundle JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

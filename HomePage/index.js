@@ -162,7 +162,44 @@ function scrollSlider(direction) {
       }, 300); // After animation completes
     }
   });
+  
 });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
